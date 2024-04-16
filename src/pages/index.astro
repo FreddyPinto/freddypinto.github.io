@@ -2,6 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import GitHub from "../icons/GitHub.astro"
+import SocialPill from "../components/SocialPill.astro"
 ---
 
 <Layout title="Welcome to Astro.">
@@ -13,7 +16,7 @@ import Badge from "../components/Badge.astro";
         alt="freddy"
       />
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
-        Hola, soy Freddy <a
+        Hola, soy Freddy<a
           href="https://www.linkedin.com/in/freddypinto-"
           target="_blank"
           rel="noopener"
@@ -22,10 +25,28 @@ import Badge from "../components/Badge.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-xl opacity-80">
-        Data Scientist & Full-Stack Web Developer con background en Procesos
-        Químicos, especializado en Data Engineering y Backend Development
+
+      <h2 class="text-2xl text-wrap">
+        <span class="text-yellow-200/90 font-semibold"
+          >Data Scientist & Full-Stack Web Developer
+        </span><span class="opacity-75"
+          >con background en Procesos Químicos, especializado en
+        </span><span class="font-semibold text-red-200/90"
+          >Data Engineering y Backend Development</span
+        >
       </h2>
+
+      <div class="flex">
+        <SocialPill href="https://www.linkedin.com/in/freddypinto-">
+          <LinkedIn class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/FreddyPinto">
+          <GitHub class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+      </div>
+      
     </section>
   </main>
 </Layout>
