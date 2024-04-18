@@ -2,25 +2,27 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
-import SocialPill from "../components/SocialPill.astro"
-import LinkedInIcon from "../icons/LinkedIn.astro";
-import GitHubIcon from "../icons/GitHub.astro"
-import MailIcon from "../icons/Mail.astro"
 import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import GitHubIcon from "../icons/GitHub.astro";
+import MailIcon from "../icons/Mail.astro";
 ---
 
-<Layout 
+<Layout
   title="Portafolio de Freddy - Data Scientist & Full Stack Web Developer."
   description="Contrata a Freddy para tus proyectos de data. Data Scientist & Full Stack Web Developer. Especializado en Ingenieria de Datos y Desarrollo Backend"
 >
-  <main>
+  <main class="px-4">
     <SectionContainer class="py-32 pb-32">
       <img
         class="rounded-full size-12 mb-4"
         src="https://avatars.githubusercontent.com/u/78459929?v=4"
         alt="Freddy"
       />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
         Hola, soy Freddy<a
           href="https://www.linkedin.com/in/freddypinto-"
           target="_blank"
@@ -31,7 +33,7 @@ import SectionContainer from "../components/SectionContainer.astro";
         </a>
       </h1>
 
-      <h2 class="text-2xl text-wrap">
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-3xl">
         <span class="text-yellow-200/90 font-semibold"
           >Data Scientist & Full-Stack Web Developer
         </span><span class="opacity-75"
@@ -41,7 +43,7 @@ import SectionContainer from "../components/SectionContainer.astro";
         >
       </h2>
 
-      <div class="flex gap-x-4 mt-8">
+      <div class="flex gap-x-4 mt-8 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/freddypinto-">
           <LinkedInIcon class="size-4 md:size-6" />
           LinkedIn
@@ -56,6 +58,5 @@ import SectionContainer from "../components/SectionContainer.astro";
         </SocialPill>
       </div>
     </SectionContainer>
-      
   </main>
 </Layout>
