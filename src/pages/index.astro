@@ -18,13 +18,13 @@ import Projects from "../components/Projects.astro";
     <SectionContainer class="py-16 pb-16 md:py-32 md:pb-32">
       <div  class="flex items-center gap-4 pb-6 lg:pb-10">
         <img
-          class="rounded-full size-16 lg:size-24"
+          class="rounded-full p-1 ring-2 ring-gray-300 size-16 lg:size-24"
           src="https://avatars.githubusercontent.com/u/78459929?v=4"
           alt="Freddy"
         />
         <div>
           <h1
-            class="bg-gradient-to-r from-sky-200 to-fuchsia-400 bg-clip-text text-transparent text-3xl md:text-4xl lg:text-5xl font-bold pb-2 lg:pb-4"
+            class="bg-gradient-to-r from-sky-200 to-fuchsia-400 bg-clip-text text-transparent text-3xl md:text-4xl lg:text-5xl font-bold pb-0.5 lg:pb-1"
           >
             Hola, soy Freddy
           </h1>
@@ -32,7 +32,7 @@ import Projects from "../components/Projects.astro";
             href="https://www.linkedin.com/in/freddypinto-"
             target="_blank"
             rel="noopener"
-            class="flex transition hover:scale-105"
+            class="flex transition hover:scale-105 pt-0.5 md:pt-1"
           >
             <Badge>Disponible para trabajar</Badge>
           </a>
@@ -68,7 +68,7 @@ import Projects from "../components/Projects.astro";
     <SectionContainer id="proyectos">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <CodeIcon class="size-7" />
-        Poyectos
+        Proyectos
       </h2>
       <Projects />
     </SectionContainer>
