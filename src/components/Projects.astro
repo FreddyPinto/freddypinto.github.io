@@ -1,7 +1,10 @@
 ---
+import SocialPill from "./SocialPill.astro";
 import FastAPI from "../icons/FastAPI.astro";
 import Python from "../icons/Python.astro";
 import AWS from "../icons/AWS.astro";
+import GitHub from "../icons/GitHub.astro";
+import Link from "../icons/Link.astro";
 const TAGS = {
   FASTAPI: {
     name: "FastAPI",
@@ -25,7 +28,8 @@ const PROJECTS = [
     description:
       "Data product que permite analizar el mercado de comida vegetariana en EE. UU. utilizando datos de Yelp y Google Maps.",
     link: "https://yelp-app-maps-reviews-and-recommendations-zixvqjteszdggb4izapp.streamlit.app/",
-    github: "https://github.com/Insights-Labs-Consultant-Agency/yelp-google-maps-reviews-and-recommendations",
+    github:
+      "https://github.com/Insights-Labs-Consultant-Agency/yelp-google-maps-reviews-and-recommendations",
     image: "/projects/yoogle.webp",
     tags: [TAGS.FASTAPI, TAGS.AMAZON],
   },
@@ -33,10 +37,17 @@ const PROJECTS = [
 ---
 
 {
-  PROJECTS.map(({ image, title, description, tags }) => (
+  PROJECTS.map(({ image, title, description, tags, link, github }) => (
     <article>
-      <h3 class="text-2xl font-semibold bg-gradient-to-r from-yellow-200 to-amber-300 bg-clip-text text-transparent mb-2">{title}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <img
+        class="rounded shadow-2xl shadow-white/10 mb-4"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+      <h3 class="text-2xl font-semibold bg-gradient-to-r from-yellow-200 to-amber-300 bg-clip-text text-transparent mb-2">
+        {title}
+      </h3>
+
       <ul class="flex gap-x-2 flex-row mb-2">
         {tags.map((tag) => (
           <li>
@@ -49,11 +60,23 @@ const PROJECTS = [
           </li>
         ))}
       </ul>
-      <img
-        class="rounded shadow-2xl shadow-white/10"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${image}`}
-      />
+
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      
+      <footer class="flex items-end justify-start mt-4 gap-x-4">
+        {github && (
+          <SocialPill href={github}>
+            <GitHub class="size-4 md:size-6" />
+            Code
+          </SocialPill>
+        )}
+        {link && (
+          <SocialPill href={link}>
+            <Link class="size-4 md:size-6" />
+            Preview
+          </SocialPill>
+        )}
+      </footer>
     </article>
   ))
 }
