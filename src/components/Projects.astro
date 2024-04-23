@@ -3,6 +3,7 @@ import SocialPill from "./SocialPill.astro";
 import FastAPI from "../icons/FastAPI.astro";
 import Python from "../icons/Python.astro";
 import AWS from "../icons/AWS.astro";
+import Streamlit from "../icons/Streamlit.astro";
 import GitHub from "../icons/GitHub.astro";
 import Link from "../icons/Link.astro";
 const TAGS = {
@@ -18,8 +19,13 @@ const TAGS = {
   },
   AMAZON: {
     name: "Amazon Web Services",
-    class: "bg-white/5 border border-white/10 text-white",
+    // class: "bg-white/5 border border-white/10 text-white",
     icon: AWS,
+  },
+  STREAMLIT: {
+    name: "Streamlit",
+    // class: "bg-white/5 border border-white/10 text-white",
+    icon: Streamlit,
   },
 };
 const PROJECTS = [
@@ -31,7 +37,7 @@ const PROJECTS = [
     github:
       "https://github.com/Insights-Labs-Consultant-Agency/yelp-google-maps-reviews-and-recommendations",
     image: "/projects/yoogle.webp",
-    tags: [TAGS.FASTAPI, TAGS.AMAZON],
+    tags: [TAGS.STREAMLIT, TAGS.AMAZON],
   },
 ];
 ---
@@ -52,7 +58,7 @@ const PROJECTS = [
         {tags.map((tag) => (
           <li>
             <span
-              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+              class={`flex gap-x-2 rounded-full text-xs py-1 px-2`}
             >
               <tag.icon class="size-4" />
               {tag.name}
