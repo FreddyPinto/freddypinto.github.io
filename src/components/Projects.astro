@@ -39,6 +39,16 @@ const PROJECTS = [
     image: "/projects/yoogle.webp",
     tags: [TAGS.STREAMLIT, TAGS.AMAZON],
   },
+  {
+    title: "RecSys API para Juegos de Steam”",
+    description:
+      "API REST que proporciona datos de Steam y recomendaciones de juegos basadas en un modelo de aprendizaje automático.",
+    link: "https://recsys-steam-api.onrender.com/",
+    github:
+      "https://github.com/FreddyPinto/recsys-steam-games",
+    image: "/projects/steam-api.webp",
+    tags: [TAGS.FASTAPI, TAGS.PYTHON],
+  },
 ];
 ---
 
@@ -69,7 +79,7 @@ const PROJECTS = [
 
       <p class="text-lg mb-4 text-pretty">{description}</p>
       
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
+      <footer class="flex items-end justify-start mt-4 mb-6 gap-x-4">
         {github && (
           <SocialPill href={github}>
             <GitHub class="size-4 md:size-6" />
