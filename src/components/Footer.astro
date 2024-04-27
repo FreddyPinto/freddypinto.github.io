@@ -1,16 +1,25 @@
 ---
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 ---
 
-<footer class= "opacity-80">
+<footer class="opacity-80">
   <div
-    class="w-full mx-auto max-w-screen-lg p-4 md:flex md:items-center md:justify-between"
+    class="w-full mx-auto max-w-screen-lg p-4 flex flex-col items-center text-center md:flex-row md:items-center md:justify-between md:text-left"
   >
     <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
-      >© {currentYear} <a href="https://www.linkedin.com/in/freddypinto-" class="hover:underline"
-        >Freddy Pinto</a
-      >.  Inspirado en el diseño de
-      <a href="https://porfolio.dev/" target="_blank" rel="noopener noreferrer">midudev</a>.
+      >© {currentYear}
+      <a
+        href="https://www.linkedin.com/in/freddypinto-"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:underline">Freddy Pinto</a
+      >. Inspirado en el diseño de
+      <a
+        href="https://porfolio.dev/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:underline">midudev</a
+      >.
     </span>
     <ul
       class="flex flex-wrap items-center mt-3 text-sm font-medium text-white/90 sm:mt-0"
@@ -25,7 +34,9 @@ const currentYear = new Date().getFullYear()
         <a href="#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
       </li>
       <li>
-        <a href="mailto:freddypinto@outlook.com" class="hover:underline">Contacto</a>
+        <a href="mailto:freddypinto@outlook.com" class="hover:underline"
+          >Contacto</a
+        >
       </li>
     </ul>
   </div>
