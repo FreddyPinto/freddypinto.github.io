@@ -1,7 +1,8 @@
 ---
 import "@fontsource-variable/onest";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -20,6 +21,7 @@ const { description, title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
 
   <body class="relative">
@@ -47,6 +49,7 @@ const { description, title } = Astro.props;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overscroll-behavior: none;
   }
 
   @media (prefers-reduced-motion: reduce) {
